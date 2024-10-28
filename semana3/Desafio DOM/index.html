@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Document</title>
+    </head>
+    <body class="color-box">
+        <div class="container">
+            <h2>Selector de color RGB</h2>
+            <div>
+                <label for="red">Rojo (R):</label><br>
+                <input type="range" id="red" name="red" min="0" max="255" value="129">
+                <span id="red-value"></span>
+            </div>
+            <div>
+                <label for="green">Verde (G):</label><br>
+                <input type="range" id="green" name="green" min="0" max="255" value="41">
+                <span id="green-value"></span>
+            </div>
+            <div>
+                <label for="blue">Azul (B):</label><br>
+                <input type="range" id="blue" name="blue" min="0" max="255" value="56">
+                <span id="blue-value"></span>
+            </div>
+        </div>
+        <div class="color-preview" id="color-preview"></div>
+
+        <script src="app.js"></script>
+    </body>
+</html>

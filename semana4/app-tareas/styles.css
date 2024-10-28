@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    /* Establece la fuente del texto a Arial o sans-serif */
+    background-color: #f4f4f4;
+    /* Color de fondo de la página */
+    margin: 0;
+    /* Elimina el margen por defecto del cuerpo */
+    padding: 0;
+    /* Elimina el padding por defecto del cuerpo */
+}
+
+.container {
+    max-width: 1200px;
+    /* Ancho máximo del contenedor */
+    margin: 0 auto;
+    /* Centra el contenedor horizontalmente */
+    padding: 20px;
+    /* Espacio interno alrededor del contenido del contenedor */
+    background-color: #fff;
+    /* Color de fondo del contenedor */
+    border-radius: 8px;
+    /* Bordes redondeados del contenedor */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    /* Sombra alrededor del contenedor */
+}
+
+header {
+    text-align: center;
+    /* Centra el texto del encabezado */
+    margin-bottom: 20px;
+    /* Espacio debajo del encabezado */
+}
+
+h1 {
+    color: #333;
+    /* Color del texto del encabezado */
+}
+
+input[type="text"],
+button {
+    padding: 10px;
+    /* Espacio interno dentro del campo de texto y botón */
+    border-radius: 5px;
+    /* Bordes redondeados del campo de texto y botón */
+    border: 1px solid #ddd;
+    /* Borde del campo de texto y botón */
+    margin-right: 10px;
+    /* Espacio a la derecha del campo de texto y botón */
+    font-size: 16px;
+    /* Tamaño de fuente del campo de texto y botón */
+}
+
+input[type="text"] {
+    flex: 1;
+    /* Hace que el campo de texto ocupe el máximo espacio disponible en su contenedor */
+    width: 100%;
+    /* Hace que el campo de texto ocupe el 100% del ancho de su contenedor */
+    box-sizing: border-box;
+    /* Incluye el borde y el padding en el tamaño total del campo de texto */
+}
+
+button {
+    background-color: #28a745;
+    /* Color de fondo del botón */
+    color: #fff;
+    /* Color del texto del botón */
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar sobre el botón */
+}
+
+button:hover {
+    background-color: #218838;
+    /* Color de fondo del botón al pasar el mouse sobre él */
+}
+
+main {
+    display: flex;
+    /* Utiliza Flexbox para el diseño del contenedor principal */
+    flex-direction: column;
+    /* Alinea los elementos en una columna */
+}
+
+#task-inputs {
+    display: flex;
+    /* Utiliza Flexbox para alinear los inputs y el botón */
+    flex-wrap: wrap;
+    /* Permite que los elementos se ajusten a la siguiente línea si no hay suficiente espacio */
+    gap: 10px;
+    /* Espacio entre los elementos dentro del contenedor */
+    margin-bottom: 20px;
+    /* Espacio debajo del contenedor de inputs y botón */
+}
+
+#task-list {
+    display: flex;
+    /* Utiliza Flexbox para el diseño de la lista de tareas */
+    flex-direction: column;
+    /* Alinea las tareas en una columna */
+    max-height: 500px;
+    /* Altura máxima del contenedor de la lista de tareas */
+    overflow-y: auto;
+    /* Agrega una barra de desplazamiento vertical si el contenido se desborda */
+    border: 1px solid #ddd;
+    /* Borde del contenedor de la lista de tareas */
+    border-radius: 5px;
+    /* Bordes redondeados del contenedor de la lista de tareas */
+    background-color: #f9f9f9;
+    /* Color de fondo del contenedor de la lista de tareas */
+    padding: 10px;
+    /* Espacio interno alrededor del contenido de la lista de tareas */
+}
+
+.task-item {
+    background-color: #fff;
+    /* Color de fondo de cada elemento de la tarea */
+    border: 1px solid #ddd;
+    /* Borde de cada elemento de la tarea */
+    border-radius: 5px;
+    /* Bordes redondeados de cada elemento de la tarea */
+    padding: 10px;
+    /* Espacio interno dentro de cada elemento de la tarea */
+    margin-bottom: 10px;
+    /* Espacio debajo de cada elemento de la tarea */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    /* Sombra alrededor de cada elemento de la tarea */
+    display: flex;
+    /* Utiliza Flexbox para el diseño del elemento de la tarea */
+    justify-content: space-between;
+    /* Espacia el contenido del elemento de la tarea */
+    align-items: center;
+    /* Alinea el contenido verticalmente */
+}
+
+.task-item p {
+    margin: 0;
+    /* Elimina el margen por defecto del párrafo dentro del elemento de la tarea */
+    flex: 1;
+    /* Hace que el párrafo ocupe el máximo espacio disponible en su contenedor */
+}
+
+.task-item .actions {
+    display: flex;
+    /* Utiliza Flexbox para alinear los botones de acción */
+    gap: 5px;
+    /* Espacio entre los botones de acción */
+}
+
+.task-item button {
+    background-color: #007bff;
+    /* Color de fondo del botón dentro del elemento de la tarea */
+    color: #fff;
+    /* Color del texto del botón dentro del elemento de la tarea */
+    border: none;
+    /* Elimina el borde del botón */
+    padding: 5px 10px;
+    /* Espacio interno dentro del botón */
+    border-radius: 3px;
+    /* Bordes redondeados del botón */
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar sobre el botón */
+    font-size: 14px;
+    /* Tamaño de fuente del botón */
+}
+
+.task-item button:hover {
+    background-color: #0056b3;
+    /* Color de fondo del botón al pasar el mouse sobre él */
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    /* Color de fondo del botón de eliminar */
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+    /* Color de fondo del botón de eliminar al pasar el mouse sobre él */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #task-inputs {
+        flex-direction: column;
+        /* Cambia la dirección del diseño a columna en pantallas pequeñas */
+        align-items: center;
+        /* Centra los elementos en pantallas pequeñas */
+    }
+
+    #task-inputs input[type="text"],
+    #task-inputs button {
+        width: 100%;
+        /* Hace que el campo de texto y el botón ocupen el 100% del ancho del contenedor */
+        margin-bottom: 10px;
+        /* Espacio debajo del campo de texto y botón */
+    }
+}
